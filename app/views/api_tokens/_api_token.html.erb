@@ -1,0 +1,20 @@
+<div id="<%= dom_id api_token %>" class="scaffold_record">
+  <p>
+    <strong>Access token:</strong>
+    <%= api_token.access_token %>
+  </p>
+
+  <p>
+    <strong>Encrypted access token:</strong>
+    <%= api_token.encrypted_access_token %>
+  </p>
+
+  <p>
+    <strong>Encrypted access token iv:</strong>
+    <%= api_token.encrypted_access_token_iv %>
+  </p>
+
+  <p>
+    <%= link_to "Show this api token", api_token %>
+  </p>
+</div>

@@ -1,0 +1,22 @@
+<%= form_with(model: api_token) do |form| %>
+  <% if api_token.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_token.errors.count, "error") %> prohibited this api_token from being saved:</h2>
+
+      <ul>
+        <% api_token.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :access_token %>
+    <%= form.text_field :access_token %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
